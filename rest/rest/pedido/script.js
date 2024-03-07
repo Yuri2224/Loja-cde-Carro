@@ -20,68 +20,80 @@ function fechar(){
 }
 
 function calcularTotal(){
-    var selectPratos = document.getElementById("selectPrato")
-    var selectBebidas = document.getElementById("selectBebida")
-    var selectSobremesas = document.getElementById("selectSobremesa")
+    var selectCarrosEspotivos = document.getElementById("selectCarroEspotivo")
+    var selectSUVs = document.getElementById("selectSUV")
+    var selectAntigos = document.getElementById("selectAntigo")
     var resultadoSpan = document.getElementById("resultado")
 
     var total = 0;
-    var prato = 0;
-    var bebida = 0;
-    var sobremesa = 0;
+    var carrosEsportivo = 0;
+    var SUV = 0;
+    var Antigo = 0;
 
-    switch (selectPratos.value) {
+    switch (selectCarrosEspotivos.value) {
         case "BMW 330i":
-            total += 160.000;
-            prato = 160.000;
+            total += 1600000.00;
+            carrosEsportivo = 1600000.00;
             break;
         case "911 TURBO S 2022":
-            total += 1.200.000;
-            prato = 1.200.000;
+            total += 1200000.00;
+            carrosEsportivo = 1200000.00;
             break;
         case "CAYENNE 2024":
-            total += 1.150.000;
-            prato = 1.150.000;
+            total += 1150000.00;
+            carrosEsportivo = 1150000.00;
             break;
         case "GT4 RS":
-            total += 1.250.000;
-            prato = 1.250.000;
+            total += 1250000.00;
+            carrosEsportivo = 1250000.00;
+            break;
+        case "None":
+            total += 0;
+            carrosEsportivo = 0;
             break;
     }
-    switch (selectBebidas.value) {
-        case "new tucson":
-            total += 150.000;
-            bebida = 150.000;
+    switch (selectSUVs.value) {
+        case "New tucson":
+            total += 150000.00;
+            SUV = 150000.00;
             break;
         case "creta n line":
-            total += 170.000;
-            bebida = 170.000;
+            total += 170000.00;
+            SUV = 170000.00;
             break;
-        case "HRV 2017":
-            total += 95.000;
-            bebida = 95.000;
+        case "HRV 2018":
+            total += 95000.00;
+            SUV = 95000.00;
+            break;
+        case "None":
+            total += 0;
+            SUV = 0;
             break;
 
     }
-    switch (selectSobremesas.value) {
+    switch (selectAntigos.value) {
         case "Mach 1 69":
-            total += 1.200000;
-            sobremesa = 1.200000;
+            total += 1200000;
+            Antigo = 1200000;
             break;
         case "Opala comodoro 77":
-            total += 150.000;
-            sobremesa = 150.000;
+            total += 1500000;
+            Antigo = 1500000;
             break;
-        case "charger 69":
-            total += 168.000;
-            sobremesa = 168.000;
+        case "Charger 69":
+            total += 1680000;
+            Antigo = 1680000;
+            break;
+        case "None":
+           total += 0;
+           carrosEsportivo = 0;
             break;
     }
 
     resultadoSpan.textContent = `R$ ${total.toFixed(2)}`
-    document.getElementById("prato-pronto").innerHTML = prato.toFixed(2);
-    document.getElementById("bebida-pronto").innerHTML = bebida.toFixed(2);
-    document.getElementById("sobremesa-pronto").innerHTML = sobremesa.toFixed(2);
+    document.getElementById("carro-pronto").innerHTML = carrosEsportivo.toFixed(2);
+    document.getElementById("SUV-pronto").innerHTML = SUV.toFixed(2);
+    document.getElementById("Antigo-pronto").innerHTML = Antigo.toFixed(2);
 }
 
 //arrow function
@@ -91,10 +103,10 @@ const limpar = () => {
     document.getElementById("selects-div").style.display = "none";
     document.getElementById("exampleFormControlInput1").value = "";
     document.getElementById("resultado").value = "";
-    document.getElementById("SelectPratos").value = "Selecione um prato";
-    document.getElementById("SelectBebida").value = "Selecione uma bebida";
-    document.getElementById("SelectSobremesa").value = "Selecione um sobremesa";
-    document.getElementById("prato-pronto").textContent = "";
-    document.getElementById("bebida-pronto").textContent = "";
-    document.getElementById("sobremesa-pronto").textContent = "";
+    document.getElementById("selectCarroEspotivo").value = "Selecione um Esportivo";
+    document.getElementById("selectSUV").value = "Selecione uma BMW";
+    document.getElementById("selectAntigo").value = "Selecione um Antigo";
+    document.getElementById("carro-pronto").textContent = "";
+    document.getElementById("SUV-pronto").textContent = "";
+    document.getElementById("Antigo-pronto").textContent = "";
 }

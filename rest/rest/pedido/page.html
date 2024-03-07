@@ -38,29 +38,32 @@
         <h2>Olá <span id="nomePrint"></span> vamos começar seu pedido!!!</h2>
         <h3>Escolha sua refeição</h3>
        <br>
-        <h5>Esportivos</h5>
-        <select id="selectPrato" class="form-select" aria-label="Default select example">
-            <option selected>Selecione um Esportivo</option>
-            <option value="Carneiro legumado">BMW 330i</option>
-            <option value="Porco molhado">911 turbo s</option>
-            <option value="Mignon amadeirado">cayenne 2024</option>
-            <option value="Crevettes aux coeurs de palmier">gt4 rs</option>
+        <h5>CarrosEsportivo</h5>
+        <select id="selectCarroEspotivo" class="form-select" aria-label="Default select example">
+            <option selected>SelecioneUmEsportivo</option>
+            <option value="BMW 330i">BMW 330i</option>
+            <option value="911 TURBO S 2022">911 TURBO S 2022</option>
+            <option value="CAYENNE 2024">CAYENNE 2024</option>
+            <option value="GT4 RS">GT4 RS</option>
+            <option value="None">None</option>
           </select>
        <br>
           <h5>SUV</h5>
-          <select id="selectBebida" class="form-select" aria-label="Default select example">
+          <select id="selectSUV" class="form-select" aria-label="Default select example">
               <option selected>Selecione um SUV</option>
-              <option value="Negroni">New tucson</option>
-              <option value="Blue label">creta n line</option>
-              <option value="Campari">HRV 2018</option>
+              <option value="New tucson">New tucson</option>
+              <option value="creta n line">creta n line</option>
+              <option value="HRV 2018">HRV 2018</option>
+              <option value="None">None</option>
             </select>
        <br>
             <h5>Antigos</h5>
-            <select id="selectSobremesa" class="form-select" aria-label="Default select example">
+            <select id="selectAntigo" class="form-select" aria-label="Default select example">
                 <option selected>Selecione um Antigo</option>
-                <option value="Macaron">Mach 1 69</option>
-                <option value="Petit-gateau">Opala comodoro 77</option>
-                <option value="Cheese cake">Charge 69</option>
+                <option value="Mach 1 69">Mach 1 69</option>
+                <option value="Opala comodoro 77">Opala comodoro 77</option>
+                <option value="Charger 69">Charge 69</option>
+                <option value="None">None</option>
               </select>
               <br>
             <button onclick="calcularTotal()" type="button" class="btn btn-outline-success">Fazer pedido</button>
@@ -71,12 +74,12 @@
           </div>
           <br>
           <div>
-            <p>Esportivos</p>
-            <p id="prato-pronto"></p>
+            <p>CarrosEsportivos</p>
+            <p id="carro-pronto"></p>
             <p>SUV</p>
-            <p id="bebida-pronto"></p>
+            <p id="SUV-pronto"></p>
             <p>Antigos</p>
-            <p id="sobremesa-pronto"></p>
+            <p id="Antigo-pronto"></p>
           </div>
     </div>
     </body>

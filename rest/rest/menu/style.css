@@ -5,7 +5,7 @@
 }
 body{
     front-family: "poppins", sans-serif;
-    background-image: url("/imagens/paito\ chaves.webp");
+    background-image: url("../imagens/paito\ chaves.webp");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -76,7 +76,7 @@ p{
 
 @media (width >= 800px){
     body{
-        background-image: url("/imagens/paito\ frente.jpg") ;
+        background-image: url("../imagens/paito\ frente.jpg") ;
     }
 
     .img-style{
