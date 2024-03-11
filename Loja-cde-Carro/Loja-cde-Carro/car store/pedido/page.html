@@ -33,14 +33,13 @@
         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Insira seu nome">
     </div>
     <button onclick="comecar()" type="button" class="btn btn-dark">Começar</button>
-
     <div id="selects-div">
         <h2>Olá <span id="nomePrint"></span> vamos começar seu pedido!!!</h2>
         <h3>Escolha sua refeição</h3>
        <br>
-        <h5>CarrosEsportivo</h5>
-        <select id="selectCarroEspotivo" class="form-select" aria-label="Default select example">
-            <option selected>SelecioneUmEsportivo</option>
+        <h5>Esportivos</h5>
+        <select id="selectEsportivos" class="form-select" aria-label="Default select example">
+            <option selected>Selecione um Esportivo</option>
             <option value="BMW 330i">BMW 330i</option>
             <option value="911 TURBO S 2022">911 TURBO S 2022</option>
             <option value="CAYENNE 2024">CAYENNE 2024</option>
@@ -49,8 +48,8 @@
             <option value="None">None</option>
           </select>
        <br>
-          <h5>SUV</h5>
-          <select id="selectSUV" class="form-select" aria-label="Default select example">
+          <h5>SUVs</h5>
+          <select id="selectSUVs" class="form-select" aria-label="Default select example">
               <option selected>Selecione um SUV</option>
               <option value="New tucson">New tucson</option>
               <option value="creta n line">creta n line</option>
@@ -60,7 +59,7 @@
             </select>
        <br>
             <h5>Antigos</h5>
-            <select id="selectAntigo" class="form-select" aria-label="Default select example">
+            <select id="selectAntigos" class="form-select" aria-label="Default select example">
                 <option selected>Selecione um Antigo</option>
                 <option value="Mach 1 69">Mach 1 69</option>
                 <option value="Opala comodoro 77">Opala comodoro 77</option>
@@ -70,19 +69,19 @@
                 <option value="None">None</option>
               </select>
               <br>
-              <h5>Super Sports</h5>
-            <select id="selectAntigo" class="form-select" aria-label="Default select example">
+              <h5>SuperSports</h5>
+            <select id="selectSuperSports" class="form-select" aria-label="Default select example">
                 <option selected>Selecione um Antigo</option>
                 <option value="AMG GT BLACK SERIES">AMG GT BLACK SERIES</option>
                 <option value="ford gt carbon">ford gt carbon</option>
                 <option value="bugatti chiron">bugatti chiron</option>
-                <option value="ferrari 250 gtl">mc laren senna gtr</option>
-                <option value="lamborghini gt 350">pagani huayra roadster</option>
+                <option value="mc laren senna gtr">mc laren senna gtr</option>
+                <option value="pagani huayra roadster">pagani huayra roadster</option>
                 <option value="None">None</option>
               </select>
               <br>
               <h5>Variados</h5>
-            <select id="selectAntigo" class="form-select" aria-label="Default select example">
+            <select id="selectVariados" class="form-select" aria-label="Default select example">
                 <option selected>Selecione um Antigo</option>
                 <option value="vision gran turismo">vision gran turismo</option>
                 <option value="zenvo tsr-s">zenvo tsr-s</option>
@@ -100,18 +99,47 @@
           </div>
           <br>
           <div>
-            <p>CarrosEsportivos</p>
-            <p id="carro-pronto"></p>
-            <p>SUV</p>
+            <p>Esportivos</p>
+            <p id="Esportivo-pronto"></p>
+            <p>SUVs</p>
             <p id="SUV-pronto"></p>
             <p>Antigos</p>
             <p id="Antigo-pronto"></p>
-            <p>super sports</p>
-            <p id="super sports-pronto"></p>
-            <p>variados</p>
-            <p id="variados-pronto"></p>
+            <p>SuperSports</p>
+            <p id="SuperSport-pronto"></p>
+            <p>Variados</p>
+            <p id="Variado-pronto"></p>
 
           </div>
     </div>
+    <div>
+      <button onclick="WhatsApp('inv')" type="button" class="btn-whatzap" id="Whats">WhatsApp</button>   
+      <div style="display:none;" id="inv">
+        <div class="contactDiv" id="contact" >
+          <div class="leftContact">
+            <div>
+              <h2>Contato</h2>
+              <p>Aqui você pode me mandar uma mensagem.</p>
+            </div>
+            <div>
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome">
+            </div>
+            <div>
+              <label for="mensagem" class="Msg">Mensagem:</label>
+              <textarea type="text" id="mensagem" style="height: 250px;"></textarea>
+            </div>
+            <button onclick="conferirMensagemWhatsApp()" class="Conferir">Conferir dados</button>
+          </div>
+          <div class="rightContact">
+          <div>
+            <p>Nome: <span id="confNome"></span></p>
+            <p>Mensagem: <span id="confMsg"></span></p>
+          </div>           
+          <button onclick="enviar()" class="Enviar">ZAP</button>
+        </div>     
+      </div>
+    </div>
+  </div>
     </body>
 </html>

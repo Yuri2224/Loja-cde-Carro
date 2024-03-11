@@ -20,45 +20,45 @@ function fechar(){
 }
 
 function calcularTotal(){
-    var selectCarrosEspotivos = document.getElementById("selectCarroEspotivo")
-    var selectSUVs = document.getElementById("selectSUV")
-    var selectAntigos = document.getElementById("selectAntigo")
+    var selectEsportivos = document.getElementById("selectEsportivos")
+    var selectSUVs = document.getElementById("selectSUVs")
+    var selectAntigos = document.getElementById("selectAntigos")
     var selectSuperSports = document.getElementById("selectSuperSports")
     var selectVariados = document.getElementById("selectVariados")
     var resultadoSpan = document.getElementById("resultado")
 
     var total = 0;
-    var carrosEsportivo = 0;
+    var Esportivo = 0;
     var SUV = 0;
     var Antigo = 0;
-    var SuperSports = 0;
-    var Variados = 0;
+    var SuperSport = 0;
+    var Variado = 0;
 
-    switch (selectCarrosEspotivos.value) {
+    switch (selectEsportivos.value) {
         case "BMW 330i":
             total += 1600000.00;
-            carrosEsportivo = 1600000.00;
+            Esportivo = 1600000.00;
             break;
         case "911 TURBO S 2022":
             total += 1200000.00;
-            carrosEsportivo = 1200000.00;
+            Esportivo = 1200000.00;
             break;
         case "CAYENNE 2024":
             total += 1150000.00;
-            carrosEsportivo = 1150000.00;
+            Esportivo = 1150000.00;
             break;
         case "GT4 RS":
             total += 1250000.00;
-            carrosEsportivo = 1250000.00;
+            Esportivo = 1250000.00;
             break;
         case "GT3 RS":
             total += 5250000.00;
-            carrosEsportivo =5250000.00;
+            Esportivo =5250000.00;
             break;
 
         case "None":
             total += 0;
-            carrosEsportivo = 0;
+            Esportivo = 0;
             break;
     }
     switch (selectSUVs.value) {
@@ -110,65 +110,65 @@ function calcularTotal(){
             Antigo = 1680000;
             break;
         case "None":
-           total += 0;
-           carrosEsportivo = 0;
+            total += 0;
+            Antigo = 0;
             break;
     }
-    switch (selectCarrosSuperSports.value) {
+    switch (selectSuperSports.value) {
         case "AMG GT BLACK SERIES":
             total += 1200000.00;
-            carrosSuperSports = 1200000.00;
+            SuperSport = 1200000.00;
             break;
         case "ford gt carbon":
             total += 11500000.00;
-            carrosSuperSports = 11500000.00;
+            SuperSport = 11500000.00;
             break;
         case "bugatti chiron":
             total += 1150000.00;
-            carrosSuperSports = 1150000.00;
+            SuperSport = 1150000.00;
             break;
         case "mc laren senna gtr":
             total += 1950000.00;
-            carrosSuperSports = 1950000.00;
+            SuperSport = 1950000.00;
             break;
         case "pagani huayra roadster":
             total += 1250000.00;
-            carrosSuperSports = 1250000.00;
+            SuperSport = 1250000.00;
             break;
         case "None":
             total += 0;
-            carrosSuperSports = 0;
+            SuperSport = 0;
             break;
     }
-    switch (selectCarrostVariados.value) {
+    switch (selectVariados.value) {
         case "vision gran turismo":
             total += 1600000.00;
-            carrosVariados = 1600000.00;
+            Variado = 1600000.00;
             break;
         case "zenvo tsr-s":
             total += 1200000.00;
-            carrosVariados = 1200000.00;
+            Variado = 1200000.00;
             break;
         case "aston martin db12":
             total += 1150000.00;
-            carrosVariados = 1150000.00;
+            Variado = 1150000.00;
             break;
         case "m3 2002":
             total += 1250000.00;
-            carroVariados = 1250000.00;
+            Variado = 1250000.00;
             break;
         case "bmw m3 turing":
             total += 1250000.00;
-            arroVariados = 1250000.00;
+            Variado = 1250000.00;
             break;
         case "None":
             total += 0;
-            carrosVariados = 0;
+            Variado = 0;
             break;
     }
 
     resultadoSpan.textContent = `R$ ${total.toFixed(2)}`
-    document.getElementById("carro-pronto").innerHTML = carrosEsportivo.toFixed(2);
+    document.getElementById("Esportivo-pronto").innerHTML = Esportivo.toFixed(2);
     document.getElementById("SUV-pronto").innerHTML = SUV.toFixed(2);
     document.getElementById("Antigo-pronto").innerHTML = Antigo.toFixed(2);
     document.getElementById("SuperSport-pronto").innerHTML = SuperSport.toFixed(2);
@@ -184,11 +184,49 @@ const limpar = () => {
     document.getElementById("selects-div").style.display = "none";
     document.getElementById("exampleFormControlInput1").value = "";
     document.getElementById("resultado").value = "";
-    document.getElementById("selectCarroEspotivo").value = "Selecione um Esportivo";
-    document.getElementById("selectSUV").value = "Selecione uma BMW";
-    document.getElementById("selectAntigo").value = "Selecione um Antigo";
-    document.getElementById("carro-pronto").textContent = "";
+    document.getElementById("selectEsportivos").value = "Selecione um Esportivo";
+    document.getElementById("selectSUVs").value = "Selecione uma SUV";
+    document.getElementById("selectAntigos").value = "Selecione um Antigo";
+    document.getElementById("selectSuperSports").value = "Selecione um SuperSport";
+    document.getElementById("selectVariados").value = "Selecione um Variado";
+    document.getElementById("Esportivo-pronto").textContent = "";
     document.getElementById("SUV-pronto").textContent = "";
     document.getElementById("Antigo-pronto").textContent = "";
+    document.getElementById("SuperSport-pronto").textContent = "";
+    document.getElementById("Variado-pronto").textContent = "";
 }
 
+var nomeGlobal;
+var mensagemGlobal;
+
+function conferirMensagemWhatsApp(){
+var nome = document.getElementById("nome").value;
+var mensagem = document.getElementById("mensagem").value;
+console.log(nome, mensagem)
+nomeGlobal = nome;
+mensagemGlobal = mensagem;
+
+document.getElementById("confNome").textContent = nome;
+document.getElementById("confMsg").textContent = mensagem;
+}
+
+function enviar(){
+    var numeroTelefone = "5541999999999"
+
+    var linkWhatsApp = "https://wa.me/" +
+     numeroTelefone + 
+     "?text=Nome: " + 
+     nomeGlobal +
+     " - " +
+     mensagemGlobal;
+
+    window.open(linkWhatsApp, "_blank");
+}
+
+function WhatsApp(el) {
+    var display = document.getElementById(el).style.display;
+    if(display == "none")
+        document.getElementById(el).style.display = 'block';
+    else
+        document.getElementById(el).style.display = 'none';
+}
